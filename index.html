@@ -32,7 +32,7 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 0 7%;
-  background: rgba(255,255,255,0.92);
+  background: rgba(255,255,255,0.93);
   backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(100,150,170,0.15);
   z-index: 100;
@@ -45,7 +45,7 @@ header {
 }
 
 .logo span {
-  color: #7bbbd2;
+  color: #e49a5b;
 }
 
 nav {
@@ -61,10 +61,11 @@ nav a {
 }
 
 nav a:hover {
-  color: #e49a58;
+  color: #e49a5b;
 }
 
 /* HERO */
+
 .hero {
   min-height: 100vh;
   padding: 100px 7% 40px;
@@ -138,7 +139,6 @@ nav a:hover {
   filter: drop-shadow(0 20px 25px rgba(60,90,100,0.18));
 }
 
-/* DECORATION */
 .mountain {
   position: absolute;
   left: 0;
@@ -152,6 +152,7 @@ nav a:hover {
 }
 
 /* COMMON */
+
 section:not(.hero) {
   padding: 100px 8%;
   max-width: 1150px;
@@ -177,6 +178,7 @@ section:not(.hero) {
 }
 
 /* NEWS */
+
 #news {
   max-width: none;
   padding-left: 8%;
@@ -212,6 +214,24 @@ section:not(.hero) {
 }
 
 /* PROFILE */
+
+#profile {
+  background: #eef9fd;
+  max-width: none;
+}
+
+.profile-inner {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.profile-intro {
+  max-width: 850px;
+  margin-bottom: 35px;
+  font-size: 1.05rem;
+  line-height: 2;
+}
+
 .profile-box {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -228,25 +248,67 @@ section:not(.hero) {
 .profile-card h3 {
   color: #78b7cc;
   margin-top: 0;
-}
-
-.profile-card p {
-  line-height: 2;
+  font-size: 1.25rem;
 }
 
 .info-row {
-  padding: 13px 16px;
+  padding: 14px 16px;
   margin-bottom: 10px;
   background: #f5fbfe;
   border-radius: 10px;
+  line-height: 1.5;
 }
 
 .info-row strong {
+  display: inline-block;
+  min-width: 115px;
   color: #e49a5b;
-  margin-right: 8px;
+}
+
+.profile-message {
+  line-height: 2;
+}
+
+.profile-message p {
+  margin-bottom: 18px;
+}
+
+/* PROFILE HIGHLIGHTS */
+
+.profile-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.highlight {
+  padding: 22px 15px;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(80,130,150,0.08);
+}
+
+.highlight-icon {
+  font-size: 1.8rem;
+  margin-bottom: 8px;
+}
+
+.highlight-title {
+  color: #78b7cc;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.highlight-text {
+  margin-top: 5px;
+  font-weight: bold;
+  color: #52636d;
 }
 
 /* MUSIC */
+
 #music {
   max-width: none;
   background: linear-gradient(180deg, #f7fcff, #eef8fd);
@@ -272,6 +334,7 @@ section:not(.hero) {
 }
 
 /* SNS */
+
 .sns-buttons {
   display: flex;
   justify-content: center;
@@ -300,6 +363,7 @@ section:not(.hero) {
 }
 
 /* FOOTER */
+
 footer {
   padding: 45px 20px;
   text-align: center;
@@ -316,6 +380,7 @@ footer {
 }
 
 /* MOBILE */
+
 @media (max-width: 800px) {
 
   header {
@@ -371,6 +436,10 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .profile-highlights {
+    grid-template-columns: 1fr 1fr;
+  }
+
   .news-item {
     display: block;
   }
@@ -383,6 +452,11 @@ footer {
   .music-card {
     padding: 30px 20px;
   }
+
+  .info-row strong {
+    display: block;
+    margin-bottom: 4px;
+  }
 }
 </style>
 </head>
@@ -390,7 +464,10 @@ footer {
 <body>
 
 <header>
-  <div class="logo">別子 <span>むぃ。</span></div>
+
+  <div class="logo">
+    別子 <span>むぃ。</span>
+  </div>
 
   <nav>
     <a href="#news">NEWS</a>
@@ -398,6 +475,7 @@ footer {
     <a href="#music">MUSIC</a>
     <a href="#sns">SNS</a>
   </nav>
+
 </header>
 
 <main>
@@ -405,7 +483,10 @@ footer {
 <section class="hero">
 
   <div class="hero-text">
-    <div class="english">EHIME LOCAL SINGER</div>
+
+    <div class="english">
+      EHIME LOCAL SINGER
+    </div>
 
     <h1>
       別子<br>
@@ -420,10 +501,13 @@ footer {
     <div class="fanmark">
       別子銅山 × 愛媛 × 音楽
     </div>
+
   </div>
 
   <div class="hero-character">
+
     <img src="besshi-mui.png" alt="別子むぃ。立ち絵">
+
   </div>
 
   <div class="mountain"></div>
@@ -432,20 +516,31 @@ footer {
 
 <section id="news">
 
-  <div class="section-label">WHAT'S NEW</div>
-  <h2 class="section-title">お知らせ<span>。</span></h2>
+  <div class="section-label">
+    WHAT'S NEW
+  </div>
+
+  <h2 class="section-title">
+    お知らせ<span>。</span>
+  </h2>
 
   <div class="news-list">
 
     <div class="news-item">
-      <div class="news-date">2026.08.28</div>
+      <div class="news-date">
+        2026.08.28
+      </div>
+
       <div class="news-text">
         公式サイトをオープンしました！
       </div>
     </div>
 
     <div class="news-item">
-      <div class="news-date">NEW</div>
+      <div class="news-date">
+        NEW
+      </div>
+
       <div class="news-text">
         これからいろんな活動を発信していきます！
       </div>
@@ -457,44 +552,136 @@ footer {
 
 <section id="profile">
 
-  <div class="section-label">PROFILE</div>
-  <h2 class="section-title">むぃ。について<span>。</span></h2>
+  <div class="profile-inner">
 
-  <div class="profile-box">
-
-    <div class="profile-card">
-      <h3>PROFILE</h3>
-
-      <div class="info-row">
-        <strong>名前</strong> 別子 むぃ。
-      </div>
-
-      <div class="info-row">
-        <strong>活動</strong> 愛媛県ご当地歌い手
-      </div>
-
-      <div class="info-row">
-        <strong>拠点</strong> 愛媛県・新居浜市
-      </div>
-
-      <div class="info-row">
-        <strong>モチーフ</strong> 別子銅山・愛媛・オレンジ・水色
-      </div>
+    <div class="section-label">
+      PROFILE
     </div>
 
-    <div class="profile-card">
-      <h3>ABOUT</h3>
+    <h2 class="section-title">
+      むぃ。について<span>。</span>
+    </h2>
 
-      <p>
-        愛媛県・新居浜市を中心に活動する
-        ご当地歌い手「別子 むぃ。」です。
-      </p>
+    <p class="profile-intro">
+      愛媛県・新居浜市を中心に活動する
+      ご当地歌い手「別子 むぃ。」です。
+      別子銅山をモチーフに、愛媛らしさと音楽を組み合わせて、
+      楽しい活動を届けていきます！
+    </p>
 
-      <p>
-        別子銅山をモチーフに、
-        愛媛らしさと音楽を組み合わせて
-        楽しい活動を届けます！
-      </p>
+    <div class="profile-box">
+
+      <div class="profile-card">
+
+        <h3>基本プロフィール</h3>
+
+        <div class="info-row">
+          <strong>名前</strong>
+          別子 むぃ。
+        </div>
+
+        <div class="info-row">
+          <strong>活動ジャンル</strong>
+          愛媛県ご当地歌い手
+        </div>
+
+        <div class="info-row">
+          <strong>活動地域</strong>
+          愛媛県・新居浜市を中心
+        </div>
+
+        <div class="info-row">
+          <strong>誕生日</strong>
+          9月30日
+        </div>
+
+        <div class="info-row">
+          <strong>活動開始日</strong>
+          2026年8月28日
+        </div>
+
+      </div>
+
+      <div class="profile-card">
+
+        <h3>むぃ。のこと</h3>
+
+        <div class="info-row">
+          <strong>好きな食べ物</strong>
+          みかん 🍊
+        </div>
+
+        <div class="info-row">
+          <strong>特技</strong>
+          書道 ✍️
+        </div>
+
+        <div class="info-row">
+          <strong>モチーフ</strong>
+          別子銅山・愛媛・オレンジ・水色
+        </div>
+
+        <div class="info-row">
+          <strong>活動</strong>
+          歌・ご当地発信・SNS
+        </div>
+
+        <div class="info-row">
+          <strong>ファンマーク</strong>
+          💧⛰️
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="profile-highlights">
+
+      <div class="highlight">
+        <div class="highlight-icon">🎂</div>
+        <div class="highlight-title">BIRTHDAY</div>
+        <div class="highlight-text">9.30</div>
+      </div>
+
+      <div class="highlight">
+        <div class="highlight-icon">🍊</div>
+        <div class="highlight-title">FAVORITE</div>
+        <div class="highlight-text">みかん</div>
+      </div>
+
+      <div class="highlight">
+        <div class="highlight-icon">✍️</div>
+        <div class="highlight-title">SPECIALTY</div>
+        <div class="highlight-text">書道</div>
+      </div>
+
+      <div class="highlight">
+        <div class="highlight-icon">⛰️</div>
+        <div class="highlight-title">MOTIF</div>
+        <div class="highlight-text">別子銅山</div>
+      </div>
+
+    </div>
+
+    <div class="profile-card" style="margin-top:25px;">
+
+      <h3>MESSAGE</h3>
+
+      <div class="profile-message">
+
+        <p>
+          歌を通して、愛媛や新居浜の魅力を
+          楽しく発信していきます！
+        </p>
+
+        <p>
+          別子銅山をモチーフにした
+          「別子 むぃ。」ならではの活動を
+          たくさん届けていくので、よろしくお願いします！
+        </p>
+
+      </div>
+
     </div>
 
   </div>
@@ -503,14 +690,23 @@ footer {
 
 <section id="music">
 
-  <div class="section-label">MUSIC</div>
-  <h2 class="section-title">音楽<span>。</span></h2>
+  <div class="section-label">
+    MUSIC
+  </div>
+
+  <h2 class="section-title">
+    音楽<span>。</span>
+  </h2>
 
   <div class="music-card">
 
-    <div class="music-icon">🎤</div>
+    <div class="music-icon">
+      🎤
+    </div>
 
-    <h3>歌ってみた・オリジナル楽曲</h3>
+    <h3>
+      歌ってみた・オリジナル楽曲
+    </h3>
 
     <p>
       歌を通して、愛媛の魅力や
@@ -523,16 +719,30 @@ footer {
 
 <section id="sns">
 
-  <div class="section-label">SNS</div>
-  <h2 class="section-title">つながろう<span>。</span></h2>
+  <div class="section-label">
+    SNS
+  </div>
+
+  <h2 class="section-title">
+    つながろう<span>。</span>
+  </h2>
 
   <div class="sns-buttons">
 
-    <a class="sns-button orange" href="https://x.com/besshi_mui" target="_blank">
+    <a
+      class="sns-button orange"
+      href="https://x.com/besshi_mui"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       X / Twitter
     </a>
 
-    <a class="sns-button" href="#" target="_blank">
+    <a
+      class="sns-button"
+      href="#"
+      target="_blank"
+    >
       YouTube
     </a>
 
